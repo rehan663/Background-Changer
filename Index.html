@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+    .container{
+            text-align: center;
+    }
+    .color{
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        border: rgb(61, 60, 60) solid 2px;
+        cursor: pointer;
+    }
+    #white{
+        background-color: white;
+    }
+    #black{
+        background-color: black;
+    }
+    #grey{
+        background-color: grey;
+    }
+    #aqua{
+        background-color: aqua;
+    }
+    .colors{
+        text-align: end;
+    }
+</style>
+</head>
+<body>
+    <div class="colors">
+        <span class="color" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="color" id="black" onclick="changeBG('#000000')"></span>
+        <span class="color" id="grey" onclick="changeBG('#808080')"></span>
+        <span class="color" id="aqua" onclick="changeBG('#00FFFF')"></span>
+    </div>
+    <div class="container">
+    <h1 class="text">Background Changer</h1>
+    <img src="https://media.istockphoto.com/id/636379014/photo/hands-forming-a-heart-shape-with-sunset-silhouette.jpg?s=612x612&w=0&k=20&c=CgjWWGEasjgwia2VT7ufXa10azba2HXmUDe96wZG8F0=" alt="pic">
+
+    <p class="text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe ad, officiis rem fugiat numquam fuga assumenda asperiores blanditiis consectetur cupiditate magnam cum accusantium dolor, neque esse id commodi aliquid corrupti earum adipisci laborum sapiente quis? Temporibus sint blanditiis, nesciunt minima magni voluptate facere deleniti distinctio! Ex nam ratione laboriosam placeat modi fugiat perspiciatis neque dicta architecto quisquam non sunt, voluptatum quae cumque fuga! Aliquid, earum vel dolore ipsum veritatis eum optio saepe esse neque ipsa suscipit beatae obcaecati eaque repudiandae! Eaque ratione blanditiis voluptatem harum nobis necessitatibus temporibus iure voluptatibus libero ea quos excepturi nihil, quas illo dolores facere ipsa!
+    </p>
+</div>
+
+<script>
+    function changeBG(color){
+    document.body.style.backgroundColor=color;
+    let txt = document.getElementsByClassName("text");
+    if(color == "#000000"){
+        for(let elm of txt){
+            elm.style.color= "white";
+        }
+    }else{
+        for(let elm of txt){
+            elm.style.color= "black";
+        }
+    }
+}
+</script>
+</body>
+</html>
